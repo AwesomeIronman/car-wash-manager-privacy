@@ -107,65 +107,114 @@
   <div class="container">
     <div class="header">
       <h1>Privacy Policy for Car Wash Manager</h1>
-      <div class="updated-date">Last Updated: August 20, 2026</div>
+      <div class="updated-date">Last Updated: September 12, 2026</div>
     </div>
 
     <p>
-      <strong>Car Wash Manager</strong> ("we", "our", or "the App") is an offline-first bookkeeping and wash record application designed for car and bike wash centers, managers, and service bay operators.
+      <strong>Car Wash Manager</strong> ("we", "our", or "the App") is an offline-first bookkeeping application for vehicle wash businesses.
     </p>
     <p>
-      We respect your privacy and are committed to protecting it. This Privacy Policy outlines our practices regarding data collection, device permissions, and local storage.
+      This Privacy Policy explains what data the App accesses, where it goes, why it is used, and how long it remains available.
     </p>
 
-    <h2>1. Data Handling & Storage</h2>
+    <h2>1. Business Data and Local Storage</h2>
     <p>
-      <strong>Business & Bookkeeping Data:</strong> All primary operational records—including vehicle entries, wash types, amounts, and customer logs—are stored locally on your device via SQLite. You maintain complete ownership and control over your records. We do not sell, rent, or trade your business data.
+      The App stores wash records, vehicle details, prices, payment methods, staff names, and notes in a SQLite database on your device.
     </p>
     <p>
-      <strong>Technical & Diagnostic Data:</strong> To monitor app performance, troubleshoot crashes, and enhance user experience, the App may collect anonymous, aggregated technical metrics (such as device model, operating system version, app version, performance diagnostics, and general usage statistics). This data is non-personally identifiable and is used solely for operational reliability.
+      We do not sell, rent, or trade your business data. The App only transfers business data when you select an export, sharing, or backup feature.
+    </p>
+    <p>
+      The paid edition offers optional Google Sheets backup. If you use it, the App transfers selected wash records to a spreadsheet in your Google account.
+    </p>
+    <p>
+      Google Sign-In gives the App your account name, email address, profile photo, and an authorization token. The App uses them only for the backup feature.
     </p>
 
-    <h2>2. Device Permissions & Usage</h2>
-    <p>The App requests only the permissions necessary to provide its core features:</p>
+    <h2>2. Crash Reports, Performance Data, and Logs</h2>
+    <p>
+      The App uses Sentry to find crashes, diagnose errors, and measure performance. This diagnostic collection occurs automatically while you use the App.
+    </p>
+    <p>
+      Sentry may receive crash reports, stack traces, diagnostic logs, technical identifiers, device model, operating-system version, app version, and performance timings.
+    </p>
+    <p>
+      The App sends a 20% sample of performance transactions. It does not use Sentry Session Replay and does not send screen recordings to Sentry.
+    </p>
+    <p>
+      The Sentry configuration disables default personal-information collection. Diagnostic events can still contain technical data related to an error.
+    </p>
+    <p>
+      Sentry processes this data for us as a service provider. For more information, read the <a href="https://sentry.io/privacy/">Sentry Privacy Policy</a>.
+    </p>
+
+    <h2>3. Microphone and Speech Recognition</h2>
+    <p>
+      The App requests microphone permission when you start voice entry. You can deny this permission and type the wash entry instead.
+    </p>
+    <p>
+      The App uses the device speech-recognition service and prefers Google's service on Android. The service converts your speech into text.
+    </p>
+    <p>
+      Depending on your device and speech-service configuration, audio can be processed on your device or sent to the provider's servers.
+    </p>
+    <p>
+      The App does not save an audio recording. The speech provider controls its own processing and retention under the provider's privacy policy.
+    </p>
+
+    <h2>4. Exporting and Sharing</h2>
+    <p>
+      The App accesses storage or the document picker when you choose to import, export, save, or share a file.
+    </p>
+    <p>
+      A receiving application, storage provider, or person controls a file after you share or save it outside the App.
+    </p>
+
+    <h2>5. Third-Party Services</h2>
     <ul>
-      <li>
-        <strong>Microphone & Speech Recognition (<code>android.permission.RECORD_AUDIO</code> / <code>NSSpeechRecognitionUsageDescription</code>):</strong>
-        Used exclusively when you tap the microphone button to dictate wash entries hands-free. Voice audio is processed in real time using native speech recognition on your device. Audio recordings are not permanently stored or used for marketing purposes.
-      </li>
-      <li>
-        <strong>Storage & Document Sharing:</strong>
-        Used solely when you explicitly request to export your records (e.g., generating and sharing an Excel spreadsheet) or import a backup file.
-      </li>
+      <li><strong>Sentry:</strong> Processes crash reports, performance data, and diagnostic logs.</li>
+      <li><strong>Google speech recognition:</strong> Can process speech audio and return text on supported Android devices.</li>
+      <li><strong>Google Sign-In and Google Sheets:</strong> Support the optional backup feature in the paid edition.</li>
+      <li><strong>Device platform services:</strong> Provide speech recognition, permissions, storage access, and document sharing.</li>
     </ul>
-
-    <h2>3. Third-Party Services & Infrastructure</h2>
     <p>
-      We may utilize standard, trusted third-party developer services and libraries (such as crash reporting, performance monitoring, or platform utilities) to help maintain app quality and diagnose technical issues. These services process limited diagnostic data in accordance with their respective privacy standards.
+      These providers process data under their own terms and privacy policies. We do not use these services to sell data or deliver advertising.
     </p>
 
-    <h2>4. Data Retention and Deletion</h2>
-    <p>
-      Because all data is stored strictly on your local device:
-    </p>
+    <h2>6. Data Retention and Deletion</h2>
     <ul>
-      <li>Uninstalling the App or clearing the App data in your device settings will permanently erase all local records.</li>
-      <li>You can export and back up your records anytime using the built-in Excel export feature.</li>
+      <li>Clearing the App data or uninstalling the App erases the local SQLite database.</li>
+      <li>Exported files remain where you saved or shared them until you delete them.</li>
+      <li>Google Sheets backups remain in your Google account until you delete the spreadsheet.</li>
+      <li>Sentry retains diagnostic data according to our Sentry project configuration and Sentry's retention rules.</li>
+      <li>A speech provider can retain data according to its privacy policy and your account or device configuration.</li>
     </ul>
-
-    <h2>5. Children's Privacy</h2>
     <p>
-      Car Wash Manager is intended for business bookkeeping and commercial operation. We do not knowingly collect or solicit personal information from children under the age of 13.
+      Contact us if you have a question or deletion request about data that we control.
     </p>
 
-    <h2>6. Changes to This Privacy Policy</h2>
+    <h2>7. Data Security</h2>
     <p>
-      We may update our Privacy Policy periodically. Any updates will be published directly on this page with an updated revision date.
+      The App uses encrypted HTTPS connections when it communicates with Sentry, Google Sign-In, and Google Sheets.
+    </p>
+    <p>
+      No storage or transmission method can guarantee complete security. Protect your device, Google account, exports, and backups from unauthorized access.
+    </p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+      Car Wash Manager is intended for business bookkeeping. We do not knowingly collect personal information from children under 13.
+    </p>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>
+      We can update this Privacy Policy when the App or its data practices change. This page will show the latest revision date.
     </p>
 
     <div class="contact-box">
-      <h2>7. Contact Us</h2>
+      <h2>10. Contact Us</h2>
       <p>
-        If you have any questions or feedback regarding this Privacy Policy or the practices of Car Wash Manager, please contact us at:
+        Contact us with questions, feedback, or data requests about this Privacy Policy.
       </p>
       <p>
         <strong>Email:</strong> <a href="mailto:cyrusgracias4u@gmail.com">cyrusgracias4u@gmail.com</a>
