@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - Car Wash Manager</title>
+  <meta name="description" content="How Car Wash Manager handles local business records, Google Drive backups, diagnostics, and speech recognition." />
   <style>
     :root {
       --primary-color: #2563eb;
@@ -107,7 +108,8 @@
   <div class="container">
     <div class="header">
       <h1>Privacy Policy for Car Wash Manager</h1>
-      <div class="updated-date">Last Updated: September 12, 2026</div>
+      <div class="updated-date">Last Updated: October 2, 2026</div>
+      <nav aria-label="Site navigation"><a href="home.html">Car Wash Manager home</a></nav>
     </div>
 
     <p>
@@ -122,13 +124,19 @@
       The App stores wash records, vehicle details, prices, payment methods, staff names, and notes in a SQLite database on your device.
     </p>
     <p>
-      We do not sell, rent, or trade your business data. The App only transfers business data when you select an export, sharing, or backup feature.
+      We do not sell, rent, or trade your business data. Exporting and sharing transfer data when you choose those features. Cloud backups transfer data when you request a backup or enable automatic backup. Diagnostic collection is described separately below.
     </p>
     <p>
-      The paid edition offers optional Google Sheets backup. If you use it, the App transfers selected wash records to a spreadsheet in your Google account.
+      The paid edition offers optional Google Drive backup and restore. With your authorization, the App uploads a snapshot of its SQLite database, including the business records stored in that database (the App removes its legacy app-settings table contents from the snapshot), to a folder named "Car Wash Manager Backups" in your Google Drive. It downloads a selected backup when you request a restore. If you enable daily automatic backup, uploads can occur while you use the App without starting each backup manually.
     </p>
     <p>
-      Google Sign-In gives the App your account name, email address, profile photo, and an authorization token. The App uses them only for the backup feature.
+      Google Sign-In gives the App your account name, email address, profile photo, and an authorization token. The App uses these to show the connected account and authorize backup, discovery, cleanup, and restore requests directly to Google Drive. Backup files also include technical metadata such as a backup date, record count, checksum, and installation identifier.
+    </p>
+    <p>
+      The App requests <code>https://www.googleapis.com/auth/drive.file</code>. This allows access only to specific Drive files created or opened with this app, not general access to all files in your Drive. The current backup feature uses database files, not Google Sheets spreadsheets.
+    </p>
+    <p>
+      Use of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Google account information and backup data are used for the backup and restore functionality, not for advertising.
     </p>
 
     <h2>2. Crash Reports, Performance Data, and Logs</h2>
@@ -174,7 +182,7 @@
     <ul>
       <li><strong>Sentry:</strong> Processes crash reports, performance data, and diagnostic logs.</li>
       <li><strong>Google speech recognition:</strong> Can process speech audio and return text on supported Android devices.</li>
-      <li><strong>Google Sign-In and Google Sheets:</strong> Support the optional backup feature in the paid edition.</li>
+      <li><strong>Google Sign-In and Google Drive:</strong> Authorize and store optional database backups in your Google account. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
       <li><strong>Device platform services:</strong> Provide speech recognition, permissions, storage access, and document sharing.</li>
     </ul>
     <p>
@@ -185,7 +193,8 @@
     <ul>
       <li>Clearing the App data or uninstalling the App erases the local SQLite database.</li>
       <li>Exported files remain where you saved or shared them until you delete them.</li>
-      <li>Google Sheets backups remain in your Google account until you delete the spreadsheet.</li>
+      <li>Drive backups remain in your Google account until you delete them or the App's backup cleanup moves them to Trash. After a new backup is verified, cleanup keeps the three newest verified backups for the current calendar month and trashes older verified backups from that month. Backups from previous months are not pruned by this policy. Google Drive controls retention in Trash.</li>
+      <li>Turning off automatic backup stops scheduled uploads. Signing out disconnects the App but does not delete backups already in Google Drive. You can delete backups in Drive and revoke the App's access through your Google Account's third-party connections settings.</li>
       <li>Sentry retains diagnostic data according to our Sentry project configuration and Sentry's retention rules.</li>
       <li>A speech provider can retain data according to its privacy policy and your account or device configuration.</li>
     </ul>
@@ -195,7 +204,7 @@
 
     <h2>7. Data Security</h2>
     <p>
-      The App uses encrypted HTTPS connections when it communicates with Sentry, Google Sign-In, and Google Sheets.
+      The App uses encrypted HTTPS connections when it communicates with Sentry, Google Sign-In, and Google Drive. Backup files are SQLite database snapshots; the App does not add password protection or its own encryption to those files.
     </p>
     <p>
       No storage or transmission method can guarantee complete security. Protect your device, Google account, exports, and backups from unauthorized access.
